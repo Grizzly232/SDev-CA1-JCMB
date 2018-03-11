@@ -1,0 +1,14 @@
+@(hello: String) <!Michael Brady X00136103>
+
+@scripts = {
+	<script src="@routes.Assets.versioned("javascripts/jquery-3.2.1.slim.js")"></script>
+	<script type="text/javascript">  
+        $(document).ready(function () {  
+            $('.dropdown-toggle').dropdown();  
+        });  
+   </script> 
+}
+
+@main("JCMB Inc.") {
+	<h1>@hello</h1>
+}

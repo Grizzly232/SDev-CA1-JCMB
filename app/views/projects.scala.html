@@ -1,0 +1,32 @@
+@(hello: String, projects: List[models.Project]) <!Michael Brady X00136103>
+
+@scripts = {
+    <script src="@routes.Assets.versioned("javascripts/jquery-3.2.1.slim.js")"></script>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('.dropdown-toggle').dropdown();
+            });
+    </script>
+}
+
+@main("JCMB Inc. Projects") {
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-sm-2 project filter">
+                <h4>Filter</h4>
+            </div>
+            @for(p<-projects) {
+            <div class="col-sm-10 project">
+                <img src="assets/images/brain.jpg">
+                <h1>@p.getProjectName</h1>
+                <h3>@p.getCategory</h3>
+                <h4>@p.getDescription</h4>
+                <form action="@routes.HomeController.project(new String(p.getProjectName))">
+                    <button type="submit" class="btn btn-success" value="View project">View</button>
+                </form>
+                <div class="clear"></div>
+            </div>
+            }
+        </div>
+    </div>
+}

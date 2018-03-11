@@ -1,0 +1,45 @@
+@(name: String, project: models.Project, collaborators: List[models.Employee]) <!Michael Brady X00136103>
+
+@scripts = {
+    <script src="@routes.Assets.versioned("javascripts/jquery-3.2.1.slim.js")"></script>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('.dropdown-toggle').dropdown();
+            });
+    </script>
+}
+
+@main("JCMB Inc. ") {
+    <div class="wrapper">
+        <div class="container">
+            <div class="well well-lg">
+                <div class="row">
+                    <img src="@routes.Assets.versioned("images/brain.jpg")">
+                    <h1>@project.getProjectName</h1>
+                    <h4>@project.getDescription</h4>
+                </div>
+                <div class="row">
+                    <h1>Project Collaborators</h1>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>ID</th>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Age</th>
+                            <th>Position</th>
+                        </tr>
+                        @for(emp<-collaborators) {
+                            <tr>
+                                <td>@emp.getEmp_id</td>
+                                <td>@emp.getfName()</td>
+                                <td>@emp.getlName()</td>
+                                <td>@emp.getAge()</td>
+                                <td>@emp.getPosition()</td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+}

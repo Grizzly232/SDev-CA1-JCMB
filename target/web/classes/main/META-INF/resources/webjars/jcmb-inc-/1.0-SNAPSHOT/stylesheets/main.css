@@ -1,0 +1,95 @@
+.container-fluid {
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+body {
+    background-color: #c8ffb7;
+}
+
+.head {
+	background-image: url("/assets/images/background.jpg");
+	background-size: 100%;
+	padding: 5%;
+	margin: 0%;
+	border-bottom: 3px solid gray;
+}
+
+.head h1 {
+	color: #e8eaed;
+	font-size: 52px;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -3px 3px 0 #000,
+    1px 1px 0 #000;  
+}
+
+.head h4 {
+	color: #e8eaed;
+	font-size: 28px;
+	text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -2px 2px 0 #000,
+    1px 1px 0 #000; 
+}
+
+.nav {
+	font-size: 18px;
+}
+
+.nav li {
+	background-color: #b7bec9;
+}
+
+.wrapper {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.project {
+    margin-top: 2%;
+    border: 2px outset gray;
+    padding: 2%;
+    background-color: #b6efa5;
+    float: right;
+}
+
+.filter {
+    float: left;
+}
+
+.project img {
+    float: left;
+    max-width: 300px;
+    max-height: 300px;
+    margin: 2%;
+    box-shadow: 3px 3px #888888;
+}
+
+.project button {
+    float: right;
+}
+
+.project h4 {
+    line-height: 1.5;
+}
+
+.clear {
+    clear: both;
+}
+
+.well {
+    margin-top: 5%;
+    background-color: #b6efa5;
+    border: 2px solid #65a54f;
+}
+
+.well img {
+    box-shadow: 5px 5px #888888;
+}
+
+.table {
+    border: 3px solid #65a54f;
+}
